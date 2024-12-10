@@ -18,7 +18,14 @@
 팀장1 팀원4
 
 ## 개발환경
-<img src="https://img.shields.io/badge/HTML5-007396?style=for-the-badge&logo=HTML5&logoColor=white">
+<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
+<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/apache%20tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
 - 언어 : Java, JSP/Servlet, HTML/CSS/JS
 - 서버 : Tomcat Server
 - 프레임워크 : Lombok 라이브러리, Mybatis XML, JSTL, COS 라이브러리, JDBC, GSON, Maven 프로젝트
