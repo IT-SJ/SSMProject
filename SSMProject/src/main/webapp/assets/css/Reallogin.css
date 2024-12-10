@@ -1,0 +1,119 @@
+/*폰트 */
+* {
+	font-family: "Noto Sans KR", serif;
+}
+
+section.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* 화면 전체 높이 */
+	width: 100%; /* 섹션의 전체 너비 */
+	background-color: white;
+}
+
+.login-container {
+	max-width: 450px;
+	padding: 24px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.login-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+}
+
+body { /*배경화면 컬러와 속성 지정 */
+	min-height: 100vh; /*브라우저창의 높이,화면 전체 사용*/
+	width: 100%; /*넓이도 전체 사용하겠다.*/
+	display: grid;
+	grid-template-columns: 2.5fr 3fr; /*비율은 2:3*/
+	background-color: #ecdbc8;
+}
+
+.left-section { /*왼쪽 글씨 큰 부분 */
+	padding: 40px;
+	text-align: center;
+}
+
+.left-section p { /*왼쪽 글씨 작은 부분 */
+	color: rgb(122, 101, 76);
+	line-height: 1.5; /* 줄 간격 조정 */
+	font-weight: bold;
+	margin-top: 10px; /* 상단 여백 추가 */
+}
+
+.left-section h2 {
+	font-size: 2.3em;
+}
+
+section { /*로그인 기능 가운데 정렬하기*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-control {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.form-control label { /*라벨 추가*/
+	display: black;
+	margin-bottom: 8px;
+	color: #333;
+	font-size: 14px;
+}
+
+input { /* 로그인 입력창 속성 */
+	width: 100%; /* px말고 % 가 반응형*/
+	background: white;
+	color: #333;
+	letter-spacing: 0.5px;
+	padding: 10px 20px; /*입력글자속성*/
+	border: 1px solid #e1e1e1
+}
+
+.button-control button {
+	width: 100%;
+	padding: 10px 20px;
+	background-color: rgb(92, 60, 28);
+	color: white;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 20px;
+}
+
+input, button {
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	font-size: 1em;
+}
+/* ----- 반응형 ------*/
+@media ( max-width : 780px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.side {
+		display: none;
+	}
+}

@@ -1,0 +1,17 @@
+/* 폰트------------------------------------------------------------ */
+* {
+    font-family: "Noto Sans KR", serif;
+
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ff0000;
+}
+
+.error-border {
+    border: 1px solid #ff0000 !important;
+    box-shadow: 0 0 3px #ff0000;
+}

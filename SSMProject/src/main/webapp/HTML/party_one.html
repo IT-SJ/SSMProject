@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모임 페이지</title>
+    <link rel="stylesheet" href="../assets/css/party_one.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">모임</h1>
+        </header>
+
+        <div class="content">
+            <!-- 왼쪽 섹션 -->
+            <div class="left-panel">
+                <div class="profile">
+                    <div class="profile-image"></div>
+                    <p class="group-title">모임 이름</p>
+                    <p class="group-description">모임 설명<br>우리 모임은 어쩌고 저쩌고~</p>
+                    <button class="write-button">모임 글 작성하기</button>
+                </div>
+            </div>
+
+            <!-- 오른쪽 섹션 -->
+            <div class="right-panel">
+                <h3 class="section-title">앨범</h3>
+                <div class="album-container">
+                    <div class="album">
+                        <div class="album-item"></div>
+                        <div class="album-item"></div>
+                        <div class="album-item"></div>
+                        <div class="album-item"></div>
+                        <div class="album-item"></div>
+                        <div class="album-item"></div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button class="page-button active" data-page="1">1</button>
+                    <button class="page-button" data-page="2">2</button>
+                </div>
+
+
+                <h3 class="section-title">모임 멤버</h3>
+                <div class="members">
+                    <div class="member">
+                        <div class="member-circle"></div>
+                        <p class="member-description">멤버 1</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-circle"></div>
+                        <p class="member-description">멤버 2</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-circle"></div>
+                        <p class="member-description">멤버 3</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-circle"></div>
+                        <p class="member-description">멤버 4</p>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">일정</h3>
+                <div class="schedule">
+                    <div class="schedule-item">
+                        <div class="date-box">
+                            <span class="month">11월</span>
+                            <span class="date">13</span>
+                        </div>
+                        <div class="schedule-info">
+                            <p class="schedule-text">모임에만 공개된 일정이에요.</p>
+                            <p class="schedule-status">종료</p>
+                            <p class="schedule-time">오후1:00 인원: 6/6명</p>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        
+                        <div class="date-box">
+                            <span class="month">11월</span>
+                            <span class="date">13</span>
+                        </div>
+                        <div class="schedule-info">
+                            <p class="schedule-text">모임에만 공개된 일정이에요.</p>
+                            <p class="schedule-status">종료</p>
+                            <p class="schedule-time">오후1:00 인원: 6/6명</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 앨범 넘어가는 자스 -->
+<script>
+const album = document.querySelector('.album');
+const pageButtons = document.querySelectorAll('.page-button');
+
+const itemsPerPage = 3; // 한 페이지에 보여줄 앨범 아이템 수
+const itemWidth = 160; // 앨범 아이템의 너비 + 간격
+
+// 페이지 버튼 클릭 이벤트
+pageButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const page = parseInt(e.target.dataset.page, 10);
+
+        // 앨범 슬라이드 위치 계산
+        const newScrollPosition = -(page - 1) * itemsPerPage * itemWidth;
+        album.style.transform = `translateX(${newScrollPosition}px)`;
+
+        // 활성화된 버튼 표시
+        pageButtons.forEach((btn) => btn.classList.remove('active'));
+        e.target.classList.add('active');
+    });
+});
+</script>
+</html>

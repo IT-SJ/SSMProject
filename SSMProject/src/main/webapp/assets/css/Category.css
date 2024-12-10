@@ -1,0 +1,113 @@
+/* ----------------------------------
+   기본 스타일 및 폰트 설정
+---------------------------------- */
+
+/* 전체 배경색 설정 */
+.bg-light {
+	background-color: #ecdbc8 !important; /* 연한 분홍색 배경 적용 */
+}
+
+/* 모든 텍스트에 적용될 기본 글꼴 설정 */
+* {
+	font-family: "Noto Sans KR", serif; /* Noto Sans KR 글꼴 지정 */
+}
+
+/* 특정 스타일의 단락(p) 색상 변경 */
+p.lead {
+	color: #34495e; /* 짙은 파란색 텍스트 */
+}
+
+/* ----------------------------------
+   카드 섹션 스타일
+---------------------------------- */
+
+/* 카드 전체 스타일 */
+.card {
+	border-radius: 10px; /* 카드의 모서리를 둥글게 설정 */
+	overflow: hidden; /* 카드 경계선 밖의 내용 숨김 */
+	background-color: #ffffff; /* 흰색 배경 */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 기본 그림자 */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 시 애니메이션 */
+}
+
+/* 카드 호버 효과 */
+.card:hover {
+	transform: translateY(-10px); /* 위로 살짝 이동 */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 그림자 더 강조 */
+}
+
+/* 카드 본문 스타일 */
+.card-body {
+	padding: 20px; /* 내부 여백 */
+}
+
+/* 카드 텍스트 스타일 */
+.card-text {
+	font-size: 1rem; /* 텍스트 크기 */
+	color: #34495e; /* 텍스트 색상 */
+	margin: 10px 0; /* 위아래 여백 */
+}
+
+/* 카드 상단 이미지 스타일 */
+.card-img-top {
+	width: 100%; /* 이미지가 카드 폭에 맞도록 설정 */
+	height: 225px; /* 고정 높이 */
+	object-fit: cover; /* 이미지가 카드에 잘 맞도록 조정 */
+}
+
+/* ----------------------------------
+   버튼 스타일 (하트 버튼 포함)
+---------------------------------- */
+
+/* 기본 버튼 스타일 */
+.btn-group .btn {
+	background-color: transparent; /* 투명 배경 */
+	border: none; /* 테두리 없음 */
+	color: #e74c3c; /* 빨간색 텍스트 (하트) */
+	font-size: 1.5rem; /* 버튼 크기 */
+	border-radius: 8px; /* 버튼의 모서리를 둥글게 설정 */
+}
+
+/* 버튼 호버 시 스타일 */
+.btn-group .btn:hover {
+	color: #c0392b; /* 어두운 빨간색으로 변경 */
+}
+
+/* ----------------------------------
+   반응형 디자인
+---------------------------------- */
+
+/* 중간 크기 화면 (최대 너비 768px)에서의 스타일 */
+@media ( max-width : 768px) {
+	.navbar-brand {
+		font-size: 1.5rem; /* 네비게이션 브랜드 크기 축소 */
+	}
+	.container {
+		padding: 15px; /* 컨테이너 내부 여백 감소 */
+	}
+	h1.fw-light {
+		font-size: 1.5rem; /* 헤딩 폰트 크기 축소 */
+		font-weight: bold; /* 굵게 표시 */
+	}
+	.btn-primary, .btn-secondary {
+		width: 100%; /* 버튼을 화면 폭에 맞춤 */
+		border-radius: 8px; /* 버튼의 모서리를 둥글게 설정 */
+	}
+	.row-cols-1 {
+		grid-template-columns: repeat(1, 1fr); /* 한 줄에 1개의 요소 배치 */
+	}
+}
+
+/* 작은 화면 (최대 너비 576px)에서의 스타일 */
+@media ( max-width : 576px) {
+	.navbar-brand {
+		font-size: 1.3rem; /* 네비게이션 브랜드 크기 더 축소 */
+	}
+	.card-img-top {
+		height: 180px; /* 카드 이미지 높이 축소 */
+	}
+	.btn-group .btn {
+		font-size: 1.2rem; /* 버튼 크기 축소 */
+		border-radius: 8px; /* 버튼의 모서리를 둥글게 설정 */
+	}
+}

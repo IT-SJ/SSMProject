@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find</title>
+    <link href="../assets/css/find.css" rel="stylesheet">
+<!-- 글꼴 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	
+
+<!-- css연결 코드 -->
+<link href="../assets/css/find.css" rel="stylesheet">
+</head>
+<body>
+   
+     <main>
+      <!-- 메인시작--------------------------------------------------------- -->
+      <div class="container">
+       
+        <h1>포장마차 찾기</h1>
+        <p>동네에서 가장 맛있는 포장마차를 찾아보세요</p>
+      
+        <div class="search-container">
+          <div class="form-group">
+          
+            <div class="location-selects" >
+              <label for="">지역</label>
+              <select id="city" name="city" onchange="updateDistrict()" required>
+                <option value="view" disabled selected>도/특별시/광역시</option>
+                <option value="서울">서울특별시</option>
+                <option value="부산">부산광역시</option>
+                <option value="광주">광주광역시</option>
+              </select>
+            
+              <select id="district" name="district" required>
+                <option value="view" disabled selected>시/군/구</option>
+              </select>
+                <label for="">메뉴</label>
+                    <select id="menu" required>
+                        <option value="">메뉴를 선택하세요</option>
+                        <option value="붕어빵">붕어빵</option>
+                        <option value="떡볶이">떡볶이</option>
+                        <option value="어묵">어묵</option>
+                        <option value="호떡">호떡</option>
+                        <option value="타코야키">타코야키</option>
+                        <option value="닭꼬치">닭꼬치</option>
+                    </select>
+                  
+            </div>
+         
+            <div>
+            <button class="btn1" onclick="search()">검색하기</button>
+            </div>
+        </div>
+        <div class="form-group">
+            
+            
+            <div id="map"></div>
+            <!-- appkey에 키 넣기 -->
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=60471655287043a8aead75467fe69d0a"></script>
+            <script>
+            var container = document.getElementById('map');
+            var options = {
+              center: new kakao.maps.LatLng(33.450701, 126.570667),
+              level: 3
+            };
+
+            var map = new kakao.maps.Map(container, options);
+	          </script>
+        </div>
+    </div>
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

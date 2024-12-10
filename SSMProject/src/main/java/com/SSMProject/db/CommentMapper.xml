@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SSMProject.db.CommentMapper">
+
+	<!-- 커뮤니티에서 댓글 작성 insert 하기위한 query문 -->
+	<insert id="CommentJoin"
+		parameterType="com.SSMProject.model.CommentDTO">
+		INSERT INTO
+		COMMENT_INFO(CMT_CONTENT,CMT_DT,ID,title)
+		values(#{cmtcontent},SYSDATE,#{id},#{title})
+	</insert>
+
+	<!-- 댓글 정보 출력! -->
+	<select id="CommentSelectAll"
+		parameterType="com.SSMProject.model.CommentDTO"
+		resultType="com.SSMProject.model.CommentDTO">
+		Select
+		CMT_CONTENT as cmtcontent,
+		CMT_DT as cmtdt,
+		TITLE as title
+		<!-- 다른 컬럼들도 필요에 따라 추가 -->
+		FROM COMMENT_INFO
+		WHERE TITLE = #{title}
+	</select>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SSMProject.db.FavoriteMapper">
+	
+	<!-- 즐겨찾기 등록 query문 -->
+	<insert id="favoriteJoin" parameterType="com.SSMProject.model.FavoriteDTO">
+		insert into Favorite_INFO(POCHAIDX,ID) VALUES(#{pochaidx},#{id})
+	</insert>
+
+	<!-- 즐겨찾기 검색 query문 -->
+	<select id="favoriteAllSelect" parameterType="com.SSMProject.model.FavoriteDTO" resultType="com.SSMProject.model.FavoriteDTO">
+		select * from Favorite_INFO WHERE id = #{id}
+	</select>
+	
+	<!--  즐겨찾기 삭제 query문 -->
+	<delete id="favoriteDelete" parameterType = "String">
+		delete from Favorite_INFO WHERE pochaidx = #{pochaidx}
+	</delete>
+
+</mapper>

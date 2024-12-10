@@ -1,0 +1,84 @@
+/* 폰트 설정 (Noto Sans KR 사용) */
+* {
+	font-family: "Noto Sans KR", serif; /* 페이지 전체 폰트를 Noto Sans KR로 설정 */
+}
+
+/* Main 영역의 여백 조정 */
+main {
+	margin-bottom: 100px; /* 하단 여백 설정 */
+}
+
+/* .btn-primary 버튼 스타일링 (기본 버튼 색상 수정) */
+.btn-primary {
+	background-color: #3d2b1f; /* 버튼 배경색을 밝은 브라운 톤으로 설정 */
+	border: none; /* 버튼의 기본 테두리 제거 */
+	color: white; /* 버튼 텍스트 색상을 흰색으로 설정 */
+	display: block; /* 버튼을 블록 요소로 설정하여 중앙 정렬 */
+	margin: 0 auto; /* 버튼을 수평 중앙 정렬 */
+	margin-top: 30px; /* 버튼 상단에 여백 추가 */
+	border-radius: 8px; /* 버튼 모서리를 둥글게 설정 */
+}
+
+/* 버튼의 공통 스타일 (버튼 크기 및 여백 설정) */
+button {
+	font-size: 18px; /* 버튼 텍스트 크기 설정 */
+	padding: 12px; /* 버튼 내부 텍스트와 테두리 간격 설정 */
+	border-radius: 8px; /* 버튼 모서리를 둥글게 설정 */
+}
+
+/* 파일 입력 필드 스타일링 */
+input[type="file"] {
+	position: relative; /* 요소의 기본 위치를 부모 요소 기준으로 설정 */
+	width: 47%; /* 입력 필드의 너비를 부모 요소 기준 50%로 설정 */
+	padding: 10px; /* 입력 필드 내부 텍스트와 테두리 간격 설정 */
+	font-size: 1rem; /* 기본 글꼴 크기 설정 */
+	border: 1px solid #ccc; /* 입력 필드 테두리 설정 */
+	border-radius: 4px; /* 입력 필드 모서리 둥글게 설정 */
+	margin: 0 auto; /* 수평 방향 중앙 정렬 */
+	height: 38px; /* 높이를 일정하게 설정 */
+	line-height: 1.5; /* 텍스트 세로 정렬 */
+}
+
+/* 텍스트, 시간, 숫자 입력 필드 공통 스타일 */
+input[type="text"], input[type="time"], input[type="number"] {
+	width: 47%; /* 입력 필드의 너비 47%로 설정 */
+	padding: 10px; /* 내부 여백 설정 */
+	font-size: 1rem; /* 폰트 크기 설정 */
+	border: 1px solid #ccc; /* 테두리 색상 설정 */
+	border-radius: 4px; /* 둥근 모서리 설정 */
+	margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* .form-group 스타일링 (각 입력 필드를 감싸는 그룹 설정) */
+.form-group {
+	margin-bottom: 20px; /* 각 폼 그룹 간 여백 설정 */
+}
+
+/* 레이블 스타일링 */
+label {
+	display: block; /* 레이블을 블록 요소로 설정 */
+	margin-bottom: 3px; /* 레이블과 입력 필드 사이 간격 설정 */
+	font-weight: bold; /* 레이블 텍스트 강조 */
+	transform: translate(27%, -30%); /* 레이블 위치 조정 */
+}
+
+/* 입력 필드 스타일 (텍스트, 숫자, 날짜 입력 필드 공통 스타일) */
+input {
+	display: block; /* 입력 필드를 블록 요소로 설정 */
+	width: 100%; /* 입력 필드의 너비를 부모 요소의 100%로 설정 */
+	padding: 10px; /* 내부 여백 설정 */
+	font-size: 1rem; /* 폰트 크기 설정 */
+	border: 1px solid #ccc; /* 테두리 색상 설정 */
+	border-radius: 4px; /* 둥근 테두리 설정 */
+	box-sizing: border-box; /* padding을 포함한 크기 계산 */
+}
+
+/* 모바일 화면에서 폼 그룹과 레이블의 간격을 줄여줌 */
+@media ( max-width : 768px) {
+	.form-group {
+		margin-bottom: 15px; /* 모바일 화면에서 폼 그룹 간 간격 축소 */
+	}
+	label {
+		margin-bottom: 10px; /* 레이블과 입력 필드 간 간격 조정 */
+	}
+}

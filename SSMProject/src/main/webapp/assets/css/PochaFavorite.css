@@ -1,0 +1,95 @@
+/* 기본 폰트 설정 */
+* {
+	font-family: "Noto Sans KR", serif;
+}
+
+/* 제목 스타일 */
+h1.fw-light {
+	color: #2c3e50;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+/* 본문 설명 글꼴 색상 */
+p.lead {
+	color: #34495e;
+}
+
+/* 카드 섹션 스타일 */
+.card {
+	border-radius: 10px; /* 카드 모서리 둥글게 */
+	overflow: hidden;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 카드 hover 시 효과 */
+.card:hover {
+	transform: translateY(-10px); /* 마우스 호버 시 카드 들뜸 효과 */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 카드 본문 */
+.card-body {
+	padding: 20px;
+	text-align: left;
+}
+
+/* 카드 텍스트 */
+.card-text {
+	font-size: 1rem;
+	color: #34495e;
+	margin: 10px 0;
+}
+
+/* 카드 이미지 스타일 */
+.card-img-top {
+	width: 100%;
+	height: 225px;
+	object-fit: cover;
+}
+
+/* 하트 버튼 스타일 */
+.btn-group .btn {
+	background-color: transparent;
+	border: none;
+	color: #e74c3c;
+	font-size: 1.5rem;
+	border-radius: 5px; /* 모든 버튼에 border-radius 추가 */
+}
+
+.btn-group .btn:hover {
+	color: #c0392b; /* 호버 시 색상 */
+}
+
+/* 반응형 디자인 */
+@media ( max-width : 768px) {
+	.navbar-brand {
+		font-size: 1.5rem;
+	}
+	.container {
+		padding: 15px;
+	}
+	h1.fw-light {
+		font-size: 1.5rem;
+	}
+	.btn-primary, .btn-secondary {
+		width: 100%;
+	}
+	.row-cols-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media ( max-width : 576px) {
+	.navbar-brand {
+		font-size: 1.3rem;
+	}
+	.card-img-top {
+		height: 180px;
+	}
+	.btn-group .btn {
+		font-size: 1.2rem;
+	}
+}

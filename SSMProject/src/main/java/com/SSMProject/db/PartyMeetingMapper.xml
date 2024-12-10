@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.SSMProject.db.PartyMeeting">
+	<insert id="MeetingJoin"
+		parameterType="com.SSMProject.model.PartyMeetingDTO">
+
+		INSERT INTO
+		MEETING_INFO(MEETING_IDX,MEETING_TITLE,MEETING_LIMIT,MEETING_DT,CREATE_DT,UPLOADPATH,ID)
+		VALUES(MEETING_SEQ.NEXTVAL,#{meetingtitle},#{meetinglimit},#{meetingdt},sysdate,#{meetingimg},#{id})
+
+	</insert>
+</mapper>

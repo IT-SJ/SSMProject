@@ -1,0 +1,120 @@
+/* 기본 폰트 설정 */
+* {
+	font-family: "Noto Sans KR", serif; /* 모든 텍스트에 "Noto Sans KR" 폰트 적용 */
+}
+
+/* 바디 스타일 */
+body {
+	
+	font-size: 16px; /* 기본 폰트 크기 설정 */
+	text-align: center; /* 텍스트 가운데 정렬 */
+	padding: 20px; /* 페이지 상하좌우 여백 설정 */
+}
+
+.container {
+	max-width: 80%; /* 화면 너비 80%로 설정 */
+	margin-top: 100px; /* 상단 여백 설정 */
+	padding: 20px; /* 내부 여백 설정 */
+	flex-direction: column; /* 세로 방향 정렬 */
+}
+
+/* 버튼 스타일 */
+.btn1 {
+	background-color: #492c14; /* 배경색 검정 */
+	color: white; /* 글자색 흰색 */
+	padding: 12px 24px; /* 버튼 내부 여백 */
+	border: none; /* 테두리 제거 */
+	border-radius: 4px; /* 버튼 모서리 둥글게 설정 */
+	cursor: pointer; /* 마우스 오버시 커서 모양 변경 */
+	margin-top: 10px; /* 버튼과 위쪽 요소 간의 간격 */
+}
+
+/* 버튼에 마우스를 올렸을 때 색상 변경 */
+button:hover {
+	background-color: #333; /* 배경색 어두운 회색으로 변경 */
+}
+
+/* 지도 스타일 */
+#map {
+	width: 100%; /* 너비 100%로 설정 */
+	height: 400px; /* 높이 400px로 설정 */
+	background-color: #f5f5f5; /* 배경색 회색 */
+	margin-top: 40px; /* 지도와 위쪽 요소 간의 간격 */
+	border-radius: 8px; /* 지도 모서리 둥글게 설정 */
+}
+
+/* 큰 화면에서의 반응형 처리 */
+@media ( min-width : 1200px) {
+	.container {
+		max-width: 70%; /* 더 큰 화면에서는 너비 70%로 설정 */
+	}
+}
+
+/* 셀렉트 박스 스타일 */
+select {
+	width: auto; /* 너비 자동 조정 */
+	padding: 15px; /* 패딩 (내부 여백) */
+	margin: 8px; /* 셀렉트 박스 간의 간격 */
+	border: 1px solid #ddd; /* 테두리 색상 */
+	border-radius: 4px; /* 셀렉트 박스 모서리 둥글게 설정 */
+	font-size: 1rem; /* 글자 크기 설정 */
+	height: 50px; /* 높이 고정 */
+}
+
+/* 폼 그룹 스타일 */
+.form-group {
+	width: 100%; /* 너비 100%로 설정 */
+	margin-bottom: 20px; /* 폼 그룹 간의 간격 */
+}
+
+/* 검색 컨테이너 스타일 */
+.search-container {
+	display: flex; /* Flexbox 활성화 */
+	flex-direction: column; /* 세로 방향 정렬 */
+	align-items: center; /* 가로로 가운데 정렬 */
+	width: 100%; /* 너비 100%로 설정 */
+}
+
+/* 지역 및 메뉴 선택 박스 */
+.location-selects {
+	display: flex; /* 가로 배치 */
+	flex-direction: row; /* 수평 정렬 */
+	gap: 10px; /* 요소 간의 간격 */
+	width: 100%; /* 부모 컨테이너의 전체 너비 */
+}
+
+/* 지역 및 메뉴 셀렉트 박스 스타일 */
+.location-selects select {
+	flex: 1; /* 균등하게 너비 분할 */
+	padding: 12px; /* 내부 여백 */
+	height: 50px; /* 높이 고정 */
+	border: 1px solid #ddd; /* 테두리 색상 */
+	border-radius: 4px; /* 셀렉트 박스 모서리 둥글게 설정 */
+	font-size: 1rem; /* 글자 크기 */
+}
+
+/* 레이블 스타일 */
+.location-selects label {
+	display: flex; /* Flexbox 활성화 */
+	align-items: center; /* 텍스트 세로 가운데 정렬 */
+	justify-content: center; /* 수평 가운데 정렬 */
+	height: 50px; /* 셀렉트 박스와 동일한 높이 */
+	font-size: 1rem; /* 글자 크기 */
+	white-space: nowrap; /* 줄바꿈 방지 */
+	margin-top: 5px; /* 레이블과 셀렉트 박스 간의 간격 */
+}
+
+/* 메뉴 셀렉트 박스에 대한 스타일 */
+#menu {
+	flex: 1; /* 동일한 크기로 설정 */
+}
+
+/* 반응형 처리: 작은 화면에서는 세로로 배치 */
+@media ( max-width : 768px) {
+	.location-selects {
+		flex-direction: column; /* 세로 배치 */
+	}
+	.location-selects select {
+		width: 100%; /* 너비 100%로 설정 */
+	}
+}

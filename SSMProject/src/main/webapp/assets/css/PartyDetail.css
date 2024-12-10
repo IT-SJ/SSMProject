@@ -1,0 +1,280 @@
+/* 전체 폰트 설정 (Noto Sans KR) */
+* {
+	font-family: "Noto Sans KR", serif;
+}
+
+/* body의 여백 및 기본 설정 */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* 모든 요소에 box-sizing 적용 */
+}
+
+/* 컨테이너 최대 너비와 상단 여백 설정 */
+.container {
+	max-width: 1200px;
+	margin: 0 auto; /* 가로 중앙 정렬 */
+	margin-top: 70px; /* 상단 여백 */
+	padding: 20px;
+}
+
+/* 헤더 영역 텍스트 가운데 정렬 및 마진 설정 */
+.header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* 메인 제목 스타일 (큰 크기와 굵은 글씨) */
+.main-title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+/* 콘텐츠 영역 레이아웃 설정 */
+.content {
+	display: flex;
+	gap: 20px; /* 왼쪽, 오른쪽 섹션 간 간격 */
+}
+
+/* 왼쪽 섹션 스타일 */
+.left-panel {
+	flex: 1; /* 가변 크기 */
+}
+
+/* 프로필 카드 스타일 */
+.profile {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px; /* 둥근 모서리 */
+	text-align: center;
+}
+
+/* 프로필 이미지 그룹 레이아웃 */
+.profile-image-group {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+/* 프로필 이미지 스타일 (원형 모양) */
+.profile-image {
+	width: 100px;
+	height: 100px;
+	background-color: #ddd; /* 기본 배경색 */
+	border-radius: 50%; /* 원형 모양 */
+}
+
+/* 그룹 이름 및 설명 텍스트 스타일 */
+.group-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.group-description {
+	font-size: 14px;
+	margin-bottom: 20px;
+	color: #666; /* 회색 텍스트 */
+}
+
+/* 모임 글 작성 버튼 스타일 */
+.write-button {
+	background-color: #5a4d4d; /* 버튼 배경색 */
+	color: #fff; /* 버튼 글자색 */
+	border: none;
+	border-radius: 5px; /* 둥근 모서리 */
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.write-button:hover {
+	background-color: #463939; /* 호버 시 배경색 변경 */
+	transform: scale(1.05); /* 호버 시 버튼 크기 증가 */
+}
+
+/* 오른쪽 섹션 스타일 */
+.right-panel {
+	flex: 2; /* 오른쪽 섹션 크기 */
+}
+
+/* 섹션 제목 스타일 */
+.section-title {
+	font-size: 18px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+/* 앨범 컨테이너 스타일 */
+.album-container {
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* 앨범 스타일 (슬라이드 효과 및 아이템 간격) */
+.album {
+	display: inline;
+	transition: transform 0.3s ease;
+	gap: 10px;
+}
+
+/* 앨범 아이템 그룹 스타일 */
+.album-item-group {
+	display: flex;
+	gap: 10px; /* 아이템 간격 */
+	justify-content: space-between;
+}
+
+/* 앨범 아이템 스타일 (4개씩 나오도록 크기 고정) */
+.album-item {
+	flex: 0 0 23%;
+	height: 150px;
+	background-color: #ddd; /* 기본 배경색 */
+	border-radius: 8px; /* 둥근 모서리 */
+}
+
+/* 페이지네이션 버튼 스타일 */
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: 10px; /* 페이지 버튼 간격 */
+	margin-top: 10px;
+}
+
+.page-button {
+	background-color: #ddd; /* 기본 배경색 */
+	border: none;
+	border-radius: 50%; /* 원형 버튼 */
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333; /* 기본 텍스트 색상 */
+	transition: background-color 0.3s; /* 호버 시 배경색 변화 */
+}
+
+.page-button.active {
+	background-color: #333; /* 활성화된 페이지의 배경색 */
+	color: #fff; /* 활성화된 페이지의 텍스트 색상 */
+}
+
+/* 멤버 리스트 스타일 */
+.members {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.member-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.member {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.member-circle {
+	width: 50px;
+	height: 50px;
+	background-color: #ddd; /* 기본 배경색 */
+	border-radius: 50%; /* 원형 모양 */
+}
+
+.member-description {
+	font-size: 14px;
+	color: #333;
+	white-space: nowrap; /* 텍스트 넘침 방지 */
+}
+
+/* 일정 스타일 */
+.schedule {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.schedule-item-group {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.schedule-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 8px; /* 둥근 모서리 */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+/* 날짜 박스 스타일 */
+.date-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f4f4f4; /* 배경색 */
+	padding: 10px;
+	border-radius: 8px;
+	width: 60px;
+	text-align: center;
+}
+
+.month {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666; /* 회색 텍스트 */
+}
+
+.date {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333; /* 날짜 텍스트 색상 */
+}
+
+/* 일정 텍스트 정보 스타일 */
+.schedule-info {
+	flex: 1;
+}
+
+.schedule-text {
+	font-size: 14px;
+	color: #777; /* 회색 텍스트 */
+	margin-bottom: 5px;
+}
+
+.schedule-status {
+	font-size: 14px;
+	color: #ff4444; /* 빨간색으로 상태 표시 */
+	margin-bottom: 5px;
+}
+
+.schedule-time {
+	font-size: 14px;
+	color: #333; /* 시간 정보 색상 */
+}
+
+.star_rating {
+  font-size: 24px;
+}
+
+.star_rating .star {
+  color: #ddd;
+  cursor: pointer;
+}
+
+.star_rating .star.active {
+  color: #ffd700;
+}
+
+

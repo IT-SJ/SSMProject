@@ -1,0 +1,134 @@
+/* 기본 글꼴 설정 */
+* {
+	font-family: "Noto Sans KR", serif; /* 모든 요소에 Noto Sans KR 폰트를 적용 */
+}
+
+/* 스타일 */
+body {
+	margin-top: 5%; /* 페이지 상단에 여백을 추가하여 중앙 정렬 효과 */
+	padding: 0; /* 기본 패딩을 제거 */
+	box-sizing: border-box; /* 모든 요소의 크기 계산에 padding과 border를 포함하도록 설정 */
+}
+
+/* 회원 정보 섹션 */
+.user-info {
+	margin-top: 40px; /* 상단 여백 추가 */
+	padding: 30px; /* 내부 여백 설정 */
+	text-align: center; /* 텍스트 중앙 정렬 */
+	margin: 40px auto; /* 수평 중앙 정렬, 수직 여백 40px */
+}
+
+/* 프로필 사진 스타일 */
+.user-info .profile-picture {
+	width: 120px; /* 프로필 사진 너비 */
+	height: 120px; /* 프로필 사진 높이 */
+	border-radius: 50%; /* 원형으로 만들기 */
+	background-color: #e7e7e7; /* 기본 배경색 회색 */
+	margin: 0 auto 15px; /* 상단 여백 제거, 하단 여백 15px, 중앙 정렬 */
+}
+
+/* 회원 ID 스타일 */
+.user-info h2 {
+	font-size: 24px; /* 글자 크기 */
+	color: #333; /* 짙은 회색 */
+	margin-bottom: 15px; /* 하단 여백 */
+}
+
+/* 버튼 컨테이너 */
+.user-info .buttons {
+	display: flex; /* 버튼을 가로로 배치 */
+	justify-content: center; /* 버튼을 중앙 정렬 */
+	gap: 10px; /* 버튼 간격 설정 */
+}
+
+/* 버튼 기본 스타일 */
+.user-info .buttons .btn1 {
+	margin: 5px; /* 버튼 주변 여백 */
+	padding: 10px 20px; /* 버튼의 상하 좌우 여백 */
+	border-radius: 8px; /* 버튼에 둥근 모서리 추가 */
+	font-size: 14px; /* 글자 크기 */
+	min-width: 150px; /* 버튼의 최소 너비 */
+	white-space: nowrap; /* 버튼 내 텍스트 줄바꿈 방지 */
+	background-color: #492c14; /* 갈색 */
+	border: none; /* 테두리 제거 */
+	color: white; /* 글씨 색을 흰색으로 변경 */
+}
+/* 버튼 기본 스타일 */
+.user-info .buttons .btn2 {
+	margin: 5px; /* 버튼 주변 여백 */
+	padding: 10px 20px; /* 버튼의 상하 좌우 여백 */
+	border-radius: 8px; /* 버튼에 둥근 모서리 추가 */
+	font-size: 14px; /* 글자 크기 */
+	min-width: 150px; /* 버튼의 최소 너비 */
+	white-space: nowrap; /* 버튼 내 텍스트 줄바꿈 방지 */
+	background-color: #d79c68;
+	border: none; /* 테두리 제거 */
+	color: white; /* 글씨 색을 흰색으로 변경 */
+}
+
+/* 폼 버튼 스타일 */
+.user-info .buttons form {
+	display: inline-flex; /* 폼을 인라인으로 배치 */
+}
+
+/* 최근 게시글 섹션 */
+.recent-posts h3 {
+	font-size: 20px; /* 제목 글자 크기 */
+	color: black; /* 제목 글자 색상 */
+}
+
+/* 게시글 썸네일 스타일 */
+.post-thumbnail {
+	height: 150px; /* 썸네일 높이 */
+	background-color: #f5ecec; /* 배경색 */
+	border-radius: 10px 10px 0 0; /* 상단 모서리를 둥글게 설정 */
+}
+
+.post-thumbnail img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 게시글 제목 스타일 */
+.post-content h4 {
+	margin: 0; /* 제목 여백 제거 */
+	font-size: 18px; /* 제목 글자 크기 */
+	color: #704646; /* 제목 색상 */
+}
+
+/* 게시글 본문 스타일 */
+.post-content p {
+	font-size: 14px; /* 본문 글자 크기 */
+	color: #555; /* 본문 색상 */
+	overflow: hidden; /* 내용이 넘치면 숨기기 */
+	text-overflow: ellipsis; /* 넘치는 내용은 '...'으로 표시 */
+	display: -webkit-box; /* Flexbox를 사용하여 내용 처리 */
+	-webkit-line-clamp: 3; /* 최대 3줄로 내용 제한 */
+	-webkit-box-orient: vertical; /* 세로로 배치 */
+	line-height: 1.4em; /* 줄 간격 */
+	max-height: 4.2em; /* 최대 높이 제한 */
+	word-wrap: break-word; /* 긴 단어를 적절히 줄바꿈 */
+}
+
+/* 게시글 내용 영역 고정 높이 설정 */
+.post-content {
+	height: 100px; /* 고정 높이 */
+	overflow: hidden; /* 내용이 넘치면 숨기기 */
+}
+
+.profile-picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 반응형 디자인 - 화면 크기가 768px 이하일 때 */
+@media ( max-width : 768px) {
+	.recent-posts .row {
+		flex-direction: column; /* 게시글을 세로로 배치 */
+	}
+	.recent-posts .col-md-4 {
+		width: 100%; /* 각 열의 너비를 100%로 설정하여 세로로 나열 */
+	}
+}

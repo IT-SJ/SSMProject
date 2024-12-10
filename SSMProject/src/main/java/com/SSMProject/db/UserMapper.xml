@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SSMProject.db.UserMapper">
+
+
+	<!-- 회원가입 query문 -->
+	<insert id="join" parameterType="com.SSMProject.model.UserDTO">
+		insert into USER_INFO(id,pw,email,USERTYPE,joindate,city,district) 
+		values(#{id},#{pw},#{email},#{userType},sysdate,#{city},#{district})
+	</insert>
+
+	
+	<!-- 로그인 query문 -->
+	<select id="login" parameterType="com.SSMProject.model.UserDTO" resultType="com.SSMProject.model.UserDTO">
+		select * from USER_INFO WHERE ID = #{id} and PW = #{pw}
+		
+	</select>
+
+	<!-- 회원정보 업데이트 query문 -->
+	<update id="update" parameterType="com.SSMProject.model.UserDTO">
+		update USER_INFO
+		set pw = #{pw} , city = #{city} , district = #{district}, profile_img = #{profile_img}
+		where id = #{id}
+	</update>
+	
+	
+
+</mapper>

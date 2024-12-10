@@ -1,0 +1,142 @@
+/* 폰트 설정 */
+* {
+	font-family: "Noto Sans KR", serif; /* 폰트를 Noto Sans KR로 지정 */
+}
+
+/* 기본 스타일 */
+body {
+	font-family: 'Arial', sans-serif; /* 기본 폰트를 Arial로 설정 */
+	margin: 0; /* 기본 여백 제거 */
+	padding: 0; /* 기본 패딩 제거 */
+	font-size: 16px; /* 기본 폰트 크기 설정 */
+}
+
+/* 공통 버튼 스타일 */
+button {
+	padding: 10px; /* 버튼 안쪽 여백 */
+	border: none; /* 버튼 테두리 제거 */
+	border-radius: 5px; /* 버튼 테두리 둥글게 */
+	cursor: pointer; /* 커서가 버튼 위로 올 때 포인터 표시 */
+}
+
+/* 댓글 작성 버튼 */
+#commentForm button {
+	
+	color: white; /* 버튼 텍스트 색상 */
+	width: 100px; /* 버튼 너비 */
+	text-align: center; /* 텍스트 가운데 정렬 */
+	margin: 0 auto; /* 버튼을 수평 중앙 정렬 */
+	display: block; /* 블록 요소로 만들어 margin 적용 */
+	border-color: #ddd; /* 테두리 색상 */
+	border-radius: 5px; /* 테두리 둥글게 */
+	background-color: #492c14; /* 버튼 배경색 */
+}
+
+/* 댓글 작성 버튼 hover 효과 */
+#commentForm button:hover {
+	background-color: #f2f8ff; /* 마우스를 올렸을 때 배경색 */
+}
+
+/* 이미지 스타일 */
+.card img {
+	height: auto; /* 이미지의 높이를 자동으로 조정 */
+	width: 80%; /* 이미지 너비를 컨테이너의 80%로 설정 */
+	display: block; /* 블록 요소로 설정하여 margin 적용 가능 */
+	margin: 0 auto; /* 좌우 자동 마진으로 가운데 정렬 */
+	border-radius: 8px; /* 이미지 테두리 둥글게 */
+}
+
+/* 섹션 스타일 */
+section {
+	width: 80%; /* 섹션의 너비를 화면의 80%로 설정 */
+	margin: 0 auto; /* 섹션을 수평 중앙 정렬 */
+	padding: 20px; /* 안쪽 여백 설정 */
+	background-color: #f8f9fa; /* 섹션 배경색 */
+	border-radius: 10px; /* 섹션의 모서리를 둥글게 설정 */
+}
+
+/* 댓글 섹션 */
+.comments {
+	margin-top: 20px; /* 댓글 섹션 상단 여백 */
+}
+
+/* 댓글의 사용자 이미지 */
+.comment img {
+	border: 1px solid #ddd; /* 이미지 테두리 */
+	border-radius: 50%; /* 이미지를 원형으로 표시 */
+	width: 40px; /* 이미지 너비 */
+	height: 40px; /* 이미지 높이 */
+}
+
+/* 댓글 입력 폼 */
+#commentForm {
+	display: flex; /* 플렉스 컨테이너 설정 */
+	flex-direction: column; /* 세로 방향 정렬 */
+	gap: 10px; /* 요소 간 간격 */
+}
+
+/* 댓글 입력창 스타일 */
+#commentInput {
+	padding: 10px; /* 입력창 안쪽 여백 */
+	border: 1px solid #ccc; /* 테두리 색상 */
+	border-radius: 5px; /* 테두리 둥글게 */
+	width: 100%; /* 너비를 부모 요소에 맞게 설정 */
+}
+
+/* 반응형 웹 - 큰 화면에 대한 스타일 */
+@media ( max-width : 992px) {
+	#commentForm button {
+		width: 80px; /* 버튼 너비 축소 */
+		margin-right: 10%; /* 버튼 오른쪽 여백 */
+	}
+	.card img {
+		width: 80%; /* 이미지 너비 축소 */
+		left: 50px; /* 이미지 위치 조정 */
+	}
+	section {
+		width: 90%; /* 섹션 너비 확대 */
+	}
+}
+
+/* 반응형 웹 - 중간 화면에 대한 스타일 */
+@media ( max-width : 768px) {
+	#commentForm button {
+		width: 70px; /* 버튼 너비 축소 */
+		font-size: 0.9rem; /* 버튼 텍스트 크기 축소 */
+	}
+	.card img {
+		width: 90%; /* 이미지 너비 확대 */
+		left: 30px; /* 이미지 위치 조정 */
+	}
+	section {
+		width: 90%; /* 섹션 너비 조정 */
+	}
+	.comment img {
+		width: 30px; /* 댓글 이미지 너비 축소 */
+		height: 30px; /* 댓글 이미지 높이 축소 */
+	}
+}
+
+/* 반응형 웹 - 작은 화면에 대한 스타일 */
+@media ( max-width : 480px) {
+	#commentForm button {
+		width: 60px; /* 버튼 너비 축소 */
+		padding: 8px; /* 버튼 안쪽 여백 축소 */
+		font-size: 0.9rem; /* 버튼 텍스트 크기 축소 */
+	}
+	.card img {
+		width: 100%; /* 이미지 너비를 100%로 설정 */
+		left: 0; /* 이미지 위치 중앙 정렬 */
+	}
+	section {
+		width: 100%; /* 섹션 너비를 화면 전체로 설정 */
+		padding: 10px; /* 섹션 안쪽 여백 축소 */
+	}
+	body {
+		font-size: 14px; /* 기본 글씨 크기 축소 */
+	}
+	.comment img {
+		width: 25px; /* 댓글 이미지 너비 축소 */
+		height: 25px; /* 댓글 이미지 높이 축소 */
+	}
+}

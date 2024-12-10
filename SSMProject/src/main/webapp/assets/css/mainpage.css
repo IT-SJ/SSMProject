@@ -1,0 +1,172 @@
+/* ---------------------------------------
+   GLOBAL STYLES
+---------------------------------------- */
+
+/* 페이지 기본 스타일 설정 */
+body {
+	background-color: #ffffff; /* 페이지 배경색 */
+	color: #5a5a5a; /* 기본 텍스트 색상 */
+	padding-top: 3rem; /* 페이지 상단 여백 */
+	padding-bottom: 3rem; /* 페이지 하단 여백 */
+	font-family: "Noto Sans KR", serif; /* 전체 폰트 설정 */
+}
+
+/* 링크 기본 스타일 */
+a {
+	color: #d2a900; /* 링크 기본 색상 */
+}
+
+a:hover {
+	color: #b07d00; /* 링크 호버 색상 */
+}
+
+/* 헤더, 푸터 등 기본 요소 스타일 */
+footer {
+
+	color: black; /* 푸터 텍스트 색상 */
+}
+
+footer a {
+	color:black; /* 푸터 링크 색상 */
+}
+
+footer a:hover {
+	color: #d2a900; /* 푸터 링크 호버 색상 */
+}
+
+/* 버튼 스타일 */
+.btn-primary, .btn-secondary {
+	background-color: #d2a900; /* 기본 버튼 배경색 */
+	border-color: #d2a900; /* 버튼 테두리 색상 */
+	border-radius: 0.25rem; /* 버튼 둥글기 추가 */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+	background-color: #796141; /* 버튼 호버 배경색 */
+	border-color: #796141; /* 버튼 호버 테두리 색상 */
+}
+
+/* ---------------------------------------
+   NAVBAR (네비게이션 바)
+---------------------------------------- */
+.navbar {
+	background-color: #ecdbc8; /* 네비게이션 바 배경색 */
+}
+
+.navbar .nav-link {
+	color: #333333; /* 네비게이션 링크 기본 색상 */
+}
+
+.navbar .nav-link:hover {
+	color: #d6a100; /* 네비게이션 링크 호버 색상 */
+}
+
+/* ---------------------------------------
+   CAROUSEL (캐러셀)
+---------------------------------------- */
+
+/* 캐러셀 스타일 */
+.carousel {
+	margin-bottom: 4rem; /* 캐러셀 하단 여백 */
+}
+
+.carousel-inner {
+	background-color: #cabdb1; /* 캐러셀 배경색 */
+}
+
+.carousel-item {
+	height: 28rem; /* 캐러셀 아이템의 높이 */
+}
+
+.carousel-item>img {
+	position: absolute; /* 이미지 위치 절대값 설정 */
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 28rem; /* 이미지 크기 조정 */
+}
+
+/* 캐러셀 캡션 */
+.carousel-caption {
+	bottom: 3rem; /* 캡션의 위치 설정 */
+	z-index: 10; /* 캡션을 이미지 위에 배치 */
+	color: #ffffff; /* 캡션 텍스트 색상 */
+}
+
+/* ---------------------------------------
+   MARKETING CONTENT (마케팅 콘텐츠)
+---------------------------------------- */
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem; /* 각 컬럼의 하단 여백 */
+	text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.marketing h2 {
+	font-weight: 400; /* 마케팅 제목의 두께 설정 */
+}
+
+.marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem; /* 좌우 여백 */
+}
+
+/* ---------------------------------------
+   FEATURETTES (기능 블록)
+---------------------------------------- */
+
+/* 기능 블록 구분선 */
+.featurette-divider {
+	border-color: #e0d7b9; /* 구분선 색상 */
+	margin: 5rem 0; /* 구분선 상하 여백 */
+}
+
+/* 기능 블록 제목 스타일 */
+.featurette-heading {
+	font-weight: 300; /* 제목 두께 설정 */
+	letter-spacing: -.05rem; /* 문자 간격 */
+}
+
+/* ---------------------------------------
+   RESPONSIVE (반응형)
+---------------------------------------- */
+
+/* 화면 너비가 40em 이상일 때 스타일 조정 */
+@media ( min-width : 40em) {
+	.carousel-caption p {
+		margin-bottom: 1.25rem; /* 텍스트 하단 여백 */
+		font-size: 1.25rem; /* 폰트 크기 설정 */
+		line-height: 1.4; /* 줄 간격 설정 */
+	}
+	.featurette-heading {
+		font-size: 50px; /* 기능 블록 제목 크기 조정 */
+	}
+}
+
+/* 화면 너비가 62em 이상일 때 스타일 조정 */
+@media ( min-width : 62em) {
+	.featurette-heading {
+		margin-top: 7rem; /* 제목 상단 여백 */
+	}
+}
+
+/* ---------------------------------------
+   기타 스타일
+---------------------------------------- */
+
+/* 전체적으로 폰트와 버튼 스타일 조정 */
+* {
+	font-family: "Noto Sans KR", serif; /* 기본 폰트 설정 */
+}
+
+.bg-light {
+	background-color: #ecdbc8 !important; /* 연한 분홍색 배경 */
+}
+
+h1 {
+	font-weight: 200px; /* 제목 폰트 두께 설정 */
+}
+
+/* 버튼의 border-radius 추가 */
+.btn-primary, .btn-secondary {
+	border-radius: 0.25rem; /* 버튼 둥글기 동일하게 설정 */
+}

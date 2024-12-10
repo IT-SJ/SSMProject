@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SSMProject.db.PartyMapper">
+
+	<insert id="partyJoin"
+		parameterType="com.SSMProject.model.PartyDTO">
+		insert into
+		party_info(party_name,party_desc,party_img,create_dt,id,city,district)
+		values(#{party_name},#{party_desc},#{party_img},SYSDATE,#{id},#{city},#{district})
+	</insert>
+	
+	<!-- 파티 출력을 위한 select query문 -->
+	<select id="PartySelectAll" parameterType="com.SSMProject.model.PartyDTO" resultType="com.SSMProject.model.PartyDTO">
+        SELECT * FROM PARTY_INFO
+        WHERE CITY = #{city}
+        AND DISTRICT = #{district}
+    </select>
+	
+</mapper>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="../assets/css/Mypage.css">
+    <!-- 부트스트랩 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/post3.css">
+ <!-- 글꼴 -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+       <!-- 네비게이션 바 ------------------------------------------------------------------------------------------------------------------------------------>
+<header>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SSM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  커뮤니티
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">모임</a></li>
+                  <li><a class="dropdown-item" href="#">게시판</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  포장마차
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">top3</a></li>
+                  <li><a class="dropdown-item" href="#">포장마차 찾기</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  사장님
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">등록</a></li>
+                  <li><a class="dropdown-item" href="#">수정</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">마이페이지</a>
+              </li>
+            </ul>
+            <button class="btn btn-light" type="submit" >로그인</button>
+          </div>
+        </div>
+      </nav>
+      
+  </header>
+
+    <!-- 회원 정보 -->
+    <section class="user-info my-5">
+        <div class="container text-center">
+            <div class="profile">
+                <div class="profile-picture"></div>
+                <h2>신경꺼 Carabiner</h2>
+                <div class="buttons">
+                    <button class="btn btn-outline-primary">즐겨찾는 포장마차</button>
+                    <button class="btn btn-outline-secondary">회원정보 수정</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 최근 글 -->
+    <!-- 최근 내가 쓴 글 섹션 -->
+<section class="recent-posts">
+    <!-- 전체 콘텐츠를 담는 컨테이너 -->
+    <div class="container">
+        <!-- 제목과 게시글 수를 표시 -->
+        <h3 class="text-center">최근 내가 쓴 글 <span class="badge bg-primary">#개</span></h3>
+        <!-- 게시글들을 그리드 형식으로 나열 -->
+        <div class="row mt-4">
+            <!-- 첫 번째 게시글 -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <!-- 썸네일을 위한 공간 -->
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <!-- 게시글 제목 -->
+                        <h4 class="card-title">오늘 서울은 하루종일 맑음</h4>
+                        <!-- 게시글 본문 -->
+                        <p class="card-text">오늘 서울은 하루 종일 맑음
+                            밤새 켜뒀던 TV 소리 들려
+                            햇살 아래 넌 늘 행복한 기억
+                            넌 지금 뭘 하고 있을까
+                            너의 웃는 얼굴 보고 싶은데
+                            
+                            요즘 내 방은 하루 종일 어둠
+                            멍하니 혼자 울다 웃곤 해
+                            지금 몇 신지 어떤 요일인지
+                            너 없인 아무 의미 없어</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 두 번째 게시글 -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <!-- 썸네일을 위한 공간 -->
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <!-- 게시글 제목 -->
+                        <h4 class="card-title">너를 그리는 우주</h4>
+                        <!-- 게시글 본문 -->
+                        <p class="card-text">난 밤이 오면 네 생각에 잠이 오지 않아
+                            그래도 설레임에 일찍 눈을 떠
+                            나도 모르게 내 안으로 들어와
+                            날이 갈수록 점점 맘은 깊어지는데
+                            
+                            술 마시는 날이면 더 보고 싶고
+                            날씨 좋으면 함께 놀러 가고 싶어
+                            잠이 오지 않아 난 너 때문에
+                            요즘 날 웃게 만드는 너 때문에</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 세 번째 게시글 -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <!-- 썸네일을 위한 공간 -->
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <!-- 게시글 제목 -->
+                        <h4 class="card-title">신경꺼</h4>
+                        <!-- 게시글 본문 -->
+                        <p class="card-text">아무말 하랬다고 왜 개처럼 짖어
+                            하지 말란 건 싫다며 또 반항아는 싫어
+                            닥쳐 stupid kid, 어디서 배운 건지?
+                            글로 배운 문화인다워 난 이게 질려 huh
+                            네 앞이나 똑바로 봐봐
+                            서로 참견 말자 그래야 아름답잖아
+                            참을 만큼 참았어 듣기 싫음 말아
+                            안 그래도 답답한 도시잖아</p>
+</section>
+
+<!-- 최근 내가 쓴 글 섹션 (중복됨, 내용 동일) -->
+<section class="recent-posts">
+    <div class="container">
+        <div class="row mt-4">
+            <!-- 첫 번째 게시글 (중복됨) -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <h4 class="card-title">오늘 서울은 하루종일 맑음</h4>
+                        <p class="card-text">오늘 서울은 하루 종일 맑음
+                            밤새 켜뒀던 TV 소리 들려
+                            햇살 아래 넌 늘 행복한 기억
+                            넌 지금 뭘 하고 있을까
+                            
+                            요즘 내 방은 하루 종일 어둠
+                            멍하니 혼자 울다 웃곤 해
+                            지금 몇 신지 어떤 요일인지
+                            너 없인 아무 의미 없어</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 두 번째 게시글 (중복됨) -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <h4 class="card-title">너를 그리는 우주</h4>
+                        <p class="card-text">난 밤이 오면 네 생각에 잠이 오지 않아
+                            그래도 설레임에 일찍 눈을 떠
+                            나도 모르게 내 안으로 들어와
+                            날이 갈수록 점점 맘은 깊어지는데
+                            
+                            술 마시는 날이면 더 보고 싶고
+                            날씨 좋으면 함께 놀러 가고 싶어
+                            잠이 오지 않아 난 너 때문에
+                            요즘 날 웃게 만드는 너 때문에</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 세 번째 게시글 (중복됨) -->
+            <div class="col-md-4 mb-4">
+                <div class="post card">
+                    <div class="post-thumbnail"></div>
+                    <div class="post-content card-body">
+                        <h4 class="card-title">신경꺼</h4>
+                        <p class="card-text">아무말 하랬다고 왜 개처럼 짖어
+                            하지 말란 건 싫다며 또 반항아는 싫어
+                            닥쳐 stupid kid, 어디서 배운 건지?
+                            글로 배운 문화인다워 난 이게 질려 huh
+                            네 앞이나 똑바로 봐봐
+                            서로 참견 말자 그래야 아름답잖아
+                            참을 만큼 참았어 듣기 싫음 말아
+                            안 그래도 답답한 도시잖아</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

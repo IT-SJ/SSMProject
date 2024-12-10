@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="assets/css/Community.css" rel="stylesheet">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 네비게이션 바 ---------------------------------------------------------------------------------------------->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SSM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                커뮤니티
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">모임</a></li>
+                                <li><a class="dropdown-item" href="#">게시판</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                포장마차
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">top3</a></li>
+                                <li><a class="dropdown-item" href="#">포장마차 찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                사장님
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">등록</a></li>
+                                <li><a class="dropdown-item" href="#">수정</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">마이페이지</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-dark" type="submit"
+                        style="background-color: #606663fa; color: rgb(226, 204, 204);">로그인</button>
+
+                    <main>
+
+
+                    </main>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- 메인 ------------------------------------------------------------------------------------------------------------>
+    <div class="header-section">
+        <h1 class="main-title">우리동네 생활</h1>
+        <p class="subtitle">동네 생활을 포스팅 하세요.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- 왼쪽 필터 영역 -->
+        <div class="filter-container">
+            <div class="filter-title">필터</div>
+            <div class="filter-section" id="region-section">
+                <label>
+                    <input type="radio" name="region" value="서울특별시" onchange="updateDistricts('서울특별시')">
+                    서울특별시
+                </label>
+                <label>
+                    <input type="radio" name="region" value="광주광역시" onchange="updateDistricts('광주광역시')">
+                    광주광역시
+                </label>
+                <label>
+                    <input type="radio" name="region" value="부산광역시" onchange="updateDistricts('부산광역시')">
+                    부산광역시
+                </label>
+            </div>
+            <div class="filter-section hidden" id="district-section">
+                <div id="district-options"></div>
+            </div>
+            <div class="filter-section hidden" id="dong-section">
+                <div id="dong-options"></div>
+            </div>
+        </div>
+
+        <!-- 오른쪽 컨텐츠 영역 -->
+        <div class="col-md-9">
+            <div class="content-wrapper">
+                <div class="button-container">
+                    <button class="register-btn">등록하기</button>
+                </div>
+
+                <!-- 게시글 카드 -->
+                <div class="post-card">
+                    <img src="placeholder-image.jpg" class="post-image" alt="게시글 이미지">
+                    <div class="post-content">
+                        <h3>글 제목</h3>
+                        <p>글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다.글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다.  
+                        </p>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <img src="placeholder-image.jpg" class="post-image" alt="게시글 이미지">
+                    <div class="post-content">
+                        <h3>글 제목</h3>
+                        <p>글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <img src="placeholder-image.jpg" class="post-image" alt="게시글 이미지">
+                    <div class="post-content">
+                        <h3>글 제목</h3>
+                        <p>글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다. 글 내용이 들어갈 공간입니다.  
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 페이지네이션 -->
+            <nav class="pn" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<!-- 필터 스크립트 -->
+<script>
+    const data = {
+        "광주광역시": {
+            "동구": ["충장동", "동명동", "계림동", "산수동", "지산동", "학동", "지원동"],
+            "서구": ["농성동", "광천동", "치평동", "상무동", "화정동", "서창동", "금호동", "풍암동", "동천동"],
+            "남구": ["양림동", "방림동", "봉선동", "진월동", "월산동", "백운동", "주월동", "효덕동"],
+            "북구": ["중흥동", "중앙동", "임동", "용봉동", "운암동", "동림동", "우산동", "문흥동", "두암동", "삼각동", "일곡동", "매곡동", "오치동"],
+            "광산구": ["송정동", "도산동", "월곡동", "첨단동", "신창동", "수완동", "하남동", "신흥동"]
+        },
+        "부산광역시": {
+            "해운대구": ["우동", "좌동"],
+            "사하구": ["감천동", "하단동"]
+        }
+    };
+
+    function updateDistricts(region) {
+        const districtSection = document.getElementById('district-section');
+        const dongSection = document.getElementById('dong-section');
+        const districtOptions = document.getElementById('district-options');
+
+        // Clear previous districts and dongs
+        districtOptions.innerHTML = '';
+        dongSection.classList.add('hidden');
+
+        if (data[region]) {
+            districtSection.classList.remove('hidden');
+            Object.keys(data[region]).forEach(district => {
+                const label = document.createElement('label');
+                label.innerHTML = `
+                    <input type="radio" name="district" value="${district}" onchange="updateDongs('${region}', '${district}')">
+                    ${district}
+                `;
+                districtOptions.appendChild(label);
+            });
+        }
+    }
+
+    function updateDongs(region, district) {
+        const dongSection = document.getElementById('dong-section');
+        const dongOptions = document.getElementById('dong-options');
+
+        // Clear previous dongs
+        dongOptions.innerHTML = '';
+
+        if (data[region] && data[region][district]) {
+            dongSection.classList.remove('hidden');
+            data[region][district].forEach(dong => {
+                const label = document.createElement('label');
+                label.innerHTML = `
+                    <input type="radio" name="dong" value="${dong}">
+                    ${dong}
+                `;
+                dongOptions.appendChild(label);
+            });
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

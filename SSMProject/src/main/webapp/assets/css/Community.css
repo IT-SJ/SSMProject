@@ -1,0 +1,241 @@
+/* 기본 폰트 설정 */
+* {
+	font-family: "Noto Sans KR", serif;
+}
+
+/* 전체 body 스타일 설정 */
+body {
+	display: flex; /* 플렉스 컨테이너 설정 */
+	flex-direction: column; /* 세로 방향 정렬 */
+	min-height: 100vh; /* 화면 최소 높이 */
+	margin: 0; /* 기본 마진 제거 */
+	padding: 0; /* 기본 패딩 제거 */
+}
+
+/* 헤더 섹션 스타일 */
+.header-section {
+	text-align: center; /* 텍스트를 가운데 정렬 */
+	width: 100%; /* 섹션의 가로 너비를 100%로 설정 */
+	padding-top: 20px; /* 상단 여백 */
+	margin-top: 80px; /* 상단 마진 */
+}
+
+/* 헤더의 메인 제목 스타일 */
+.header-section .main-title {
+	font-size: 32px; /* 큰 제목 크기 */
+	font-weight: bold; /* 제목 볼드체 */
+	color: #000000; /* 검정색 텍스트 */
+}
+
+/* 헤더의 부제목 스타일 */
+.header-section .subtitle {
+	font-size: 18px; /* 부제목 크기 */
+	color: #000000; /* 검정색 텍스트 */
+}
+
+/* 컨테이너 스타일 */
+.container {
+	display: flex; /* 플렉스 레이아웃 */
+	gap: 20px; /* 필터와 게시물 간 간격 */
+	width: 100%; /* 가로 100% */
+	padding: 20px; /* 안쪽 여백 */
+	justify-content: center; /* 가운데 정렬 */
+	align-items: flex-start; /* 상단 정렬 */
+}
+
+/* 필터 영역 스타일 */
+.filter-container {
+	flex: 1; /* 나머지 공간을 차지 */
+	padding: 30px; /* 내부 여백 */
+	border: 1px solid #ddd; /* 경계선 */
+	border-radius: 8px; /* 둥근 경계선 */
+	max-width: 200px; /* 최대 너비 */
+	height: fit-content; /* 내용에 맞는 높이 */
+	margin-top: 65px; /* 상단 마진 */
+	margin-right: 50px; /* 오른쪽 마진 */
+}
+
+/* 필터 제목 스타일 */
+.filter-title {
+	font-size: 18px; /* 글씨 크기 */
+	font-weight: bold; /* 볼드체 */
+	margin-bottom: 15px; /* 하단 여백 */
+}
+
+/* 필터 항목 스타일 */
+.filter-section {
+	margin-bottom: 20px; /* 하단 여백 */
+}
+
+.filter-section label {
+	display: block; /* 블록 요소로 변환 */
+	margin: 5px 0; /* 상하 간격 */
+	font-size: 14px; /* 글씨 크기 */
+}
+
+/* 등록하기 버튼 스타일 */
+.button-container {
+	display: flex; /* 플렉스 레이아웃 사용 */
+	justify-content: flex-end; /* 버튼을 우측 정렬 */
+	width: 100%; /* 100% 너비 */
+	margin-bottom: 20px; /* 아래 여백 추가 */
+}
+.register-btn {
+	background-color: #492c14; /* 배경색 */
+	color: #ffffff; /* 텍스트 색상 */
+	border: none; /* 기본 테두리 제거 */
+	padding: 10px 20px; /* 여백 설정 */
+	border-radius: 8px; /* 둥근 모서리 */
+	cursor: pointer; /* 마우스 커서 포인터로 변경 */
+	transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+}
+
+.register-btn:hover {
+	background-color: #4a4137; /* 호버 시 배경색 변경 */
+}
+
+/* 게시물 영역 스타일 */
+.col-md-9 {
+	flex: 1; /* 나머지 공간을 차지 */
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	align-items: center; /* 가운데 정렬 */
+}
+
+/* 게시물 카드 스타일 */
+.post-card {
+	max-width: 800px; /* 최대 너비 */
+	min-width: 800px; /* 최소 너비 */
+	width: 100%; /* 부모 요소에 맞춰서 크기 설정 */
+	border: 1px solid #ddd; /* 경계선 */
+	border-radius: 8px; /* 둥근 경계선 */
+	display: flex; /* 플렉스 레이아웃 */
+	gap: 15px; /* 카드 내 항목 간 간격 */
+	padding: 15px; /* 카드 안쪽 여백 */
+	margin-bottom: 20px; /* 카드 간 간격 */
+	height: 170px; /* 고정 높이 */
+	overflow: hidden; /* 넘치는 내용 숨기기 */
+}
+
+/* 게시물 이미지 스타일 */
+.post-image {
+	width: 150px; /* 이미지 너비 */
+	height: 150px; /* 이미지 높이 */
+	object-fit: cover; /* 비율 맞춰서 이미지 자르기 */
+	align-items: center; /* 중앙 정렬 */
+}
+
+/* 게시물 내용 스타일 */
+.post-content {
+	flex: 1; /* 나머지 공간을 차지 */
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* 넘치는 내용 숨기기 */
+}
+
+/* 게시물 제목 스타일 */
+.post-content h3 {
+	margin: 0 0 25px; /* 하단 여백 */
+	font-size: 20px; /* 제목 크기 */
+	font-weight: bold; /* 제목 볼드체 */
+	line-height: 1.2; /* 줄 간격 */
+	overflow: hidden; /* 넘치는 내용 숨기기 */
+	white-space: nowrap; /* 텍스트 한 줄로 표시 */
+	text-overflow: ellipsis; /* 말줄임표 처리 */
+}
+
+/* 게시물 내용 스타일 */
+.post-content p {
+	font-size: 16px; /* 글씨 크기 */
+	color: #666666; /* 색상 */
+	line-height: 1.4; /* 줄 간격 */
+	overflow: hidden; /* 넘치는 내용 숨기기 */
+	text-overflow: ellipsis; /* 말줄임표 처리 */
+	display: -webkit-box; /* 여러 줄 처리 */
+	-webkit-line-clamp: 3; /* 최대 4줄까지 표시 */
+	-webkit-box-orient: vertical; /* 수직 방향으로 정렬 */
+	white-space: normal; /* 줄바꿈 허용 */
+}
+/* 페이지 네이션 스타일 */
+.pn {
+	display: flex;
+	justify-content: center; /* 가로 중앙 정렬 */
+	width: 100%;
+	margin-top: 10px; /* 페이지네이션 상단 여백 */
+}
+
+.pagination {
+	display: flex;
+	justify-content: center; /* 가로 중앙 정렬 */
+	margin: 0; /* 기본 마진 제거 */
+	padding: 0; /* 기본 패딩 제거 */
+}
+
+.pagination .page-link {
+	color: #000000; /* 페이지 링크 기본 색상 */
+}
+
+.page-item.active .page-link {
+	background-color: #4A4137; /* 활성 페이지 링크 배경색 */
+	border-color: #4A4137; /* 활성 페이지 링크 경계선 색상 */
+	color: white; /* 활성 페이지 링크 글자색 */
+}
+
+.page-link:hover {
+	color: #4A4137; /* 호버 시 텍스트 색상 */
+	background-color: #ecdbc8; /* 호버 시 배경색 */
+}
+
+.page-link:focus {
+	box-shadow: none; /* 포커스 상태에서 그림자 제거 */
+	color: #000000; /* 포커스 상태에서 텍스트 색상 */
+}
+
+/* 반응형 디자인 - 화면 너비가 768px 이하일 경우 */
+@media ( max-width : 768px) {
+	.header-section .main-title {
+		font-size: 28px; /* 제목 크기 */
+	}
+	.header-section .subtitle {
+		font-size: 16px; /* 부제목 크기 */
+	}
+	.post-card {
+		flex-direction: column; /* 세로 방향으로 변경 */
+		align-items: flex-start; /* 왼쪽 정렬 */
+	}
+	.post-image {
+		width: 100%; /* 이미지 크기 조정 */
+		height: 100px; /* 이미지 높이 조정 */
+		margin-bottom: 15px; /* 하단 여백 */
+	}
+	.post-content {
+		width: 100%; /* 내용 영역 넓이 조정 */
+	}
+}
+
+/* 반응형 디자인 - 화면 너비가 480px 이하일 경우 */
+@media ( max-width : 480px) {
+	.header-section .main-title {
+		font-size: 24px; /* 제목 크기 */
+	}
+	.header-section .subtitle {
+		font-size: 14px; /* 부제목 크기 */
+	}
+	.filter-container {
+		padding: 15px; /* 필터 영역 여백 조정 */
+	}
+	.post-card {
+		padding: 10px; /* 게시물 카드 여백 조정 */
+	}
+	.post-content h3 {
+		font-size: 12px; /* 제목 크기 */
+	}
+	.post-content p {
+		font-size: 10px; /* 내용 크기 */
+	}
+	.register-btn {
+		padding: 0px 8px; /* 버튼 여백 조정 */
+		font-size: 14px; /* 버튼 글씨 크기 */
+	}
+}

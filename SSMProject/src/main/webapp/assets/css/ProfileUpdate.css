@@ -1,0 +1,174 @@
+/* 기본 폰트 설정 */
+* {
+	font-family: "Noto Sans KR", serif;
+}
+
+/* 네비게이션 링크 색상 */
+.navbar .nav-link {
+	color: #333333; /* 네비게이션 링크 기본 색상 */
+}
+
+.navbar .nav-link:hover {
+	color: #d6a100; /* 네비게이션 링크 호버 색상 */
+}
+
+/* 네비게이션바 배경색 */
+.bg-light {
+	background-color: #ecdbc8 !important;
+}
+
+/* 바디 스타일 */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #fff;
+	padding-top: 90px;
+}
+
+/* 회원 정보 수정 컨테이너 */
+.modify-container {
+	width: 100%;
+	max-width: 480px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 제목 스타일 */
+.title {
+	font-size: 24px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-weight: bold; /* 회원수정 볼드 */
+}
+
+/* 프로필 이미지 섹션 */
+.profile-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+/* 프로필 이미지 스타일 */
+.profile-img {
+	box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
+	width: 150px;
+	height: 150px;
+	border-radius: 50%; /* 원형으로 만들기 */
+	object-fit: cover; /* 이미지 비율 유지 */
+	margin-bottom: 15px;
+	border: 2px solid black;
+	display: block; /* 블록 요소로 설정 */
+}
+
+/* 닉네임 스타일 */
+.user-id {
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+/* 사진 변경 버튼 */
+.edit-photo-btn {
+	padding: 8px 20px;
+	border: 1px solid #3d2b1f;
+	border-radius: 20px;
+	background: #3d2b1f;  /* 배경색을 #3d2b1f로 수정 */
+	color: white;  /* 글자색을 흰색으로 수정 */
+	cursor: pointer;
+}
+
+.edit-photo-btn:hover {
+	background-color: #5a3a29; /* 호버 시 배경색을 조금 더 밝은 색으로 설정 */
+}
+
+/* 폼 스타일 */
+.edit-form {
+	width: 100%;
+}
+
+/* 폼 그룹 */
+.form-group {
+	margin-bottom: 20px;
+}
+
+/* 폼 레이블 */
+.form-group label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+/* 지역 셀렉트 박스 스타일 */
+.location-selects {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.location-selects select {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+
+/* 입력 필드 스타일 */
+.form-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+/* 버튼 공통 스타일 */
+.location-btn, .password-btn {
+	width: 100%;
+	padding: 12px;
+	background-color: #3d2b1f;  /* 배경색을 #3d2b1f로 수정 */
+	color: white;  /* 글자색을 흰색으로 수정 */
+	border: none;
+	border-radius: 8px;  /* 버튼의 모서리를 둥글게 */
+	cursor: pointer;
+}
+
+.location-btn:hover, .password-btn:hover {
+	background-color: #5a3a29; /* 호버 시 배경색을 조금 더 밝은 색으로 설정 */
+	opacity: 0.9;
+}
+
+/* 메뉴 스타일 */
+#menu {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+.files {
+	display: inline-block;
+	padding: 10px 18px;
+	background-color: #492c14; /* 갈색 */
+	color: #fff;
+	border-radius: 8px; /* 모서리 둥글게 */
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 15px;
+	font-weight: bold;
+	text-align: center;
+	transition: background-color 0.3s ease;
+}
+/* 특정 id를 가진 label */
+label#fileUploadLabel {
+    background-color: #492c14;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

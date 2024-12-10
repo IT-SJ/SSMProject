@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SSMProject.db.PochaMapper">
+
+	<!-- 포차 등록 query문 -->
+	<insert id="PochaJoin"
+		parameterType="com.SSMProject.model.PochaDTO">
+		insert into
+		POCHA_INFO(pocha_name,pocha_addr,lat,lon,pocha_tel,dayList,uploadPath,create_dt,shopoper_start,shopoper_end,menu,id)
+		values(#{pocha_name},#{pocha_addr},#{lat},#{lon},
+		#{pocha_tel},#{dayList},#{uploadPath},SYSDATE,#{shopoper_start},#{shopoper_end},#{menu},#{id})
+	</insert>
+
+	<!-- 포차 리스트 출력을 위한 select query문 -->
+	<select id="PochaSelectAll"
+		parameterType="com.SSMProject.model.PochaDTO"
+		resultType="com.SSMProject.model.PochaDTO">
+		select * from Pocha_INFO WHERE pocha_addr LIKE '%' ||
+		#{pocha_addr} || '%' and menu = #{menu}
+	</select>
+
+	<!-- 즐겨찾기 포차 리스트 출력을 위한 select query문 -->
+	<select id="favSelectAll" parameterType="java.util.List"
+		resultType="com.SSMProject.model.PochaDTO">
+		SELECT * FROM pocha_info
+		<where>
+			<if test="list != null and list.size() > 0">
+				pocha_idx IN
+				<foreach collection="list" item="favorite" open="("
+					separator="," close=")">
+					#{favorite.pochaidx}
+				</foreach>
+			</if>
+			<if test="list == null or list.size() == 0">
+				1 = 0
+			</if>
+		</where>
+	</select>
+
+	<!-- 포차 업데이트 -->
+	<update id="PochaUpdate"
+		parameterType="com.SSMProject.model.PochaDTO">
+		update POCHA_INFO
+		set POCHA_ADDR =#{pocha_addr},
+		LAT=#{lat}, LON=#{lon}, DAYLIST=#{dayList}, UPLOADPATH
+		=#{uploadPath},
+		SHOPOPER_START =#{shopoper_start}, SHOPOPER_END
+		=#{shopoper_end}
+		where ID = #{id}
+	</update>
+
+	<!-- 아이디에 따른 포차정보 검색 -->
+	<select id="PochaSelectOne" parameterType="String"
+		resultType="com.SSMProject.model.PochaDTO">
+		select * from POCHA_INFO
+		WHERE ID= #{id}
+	</select>
+
+	<!-- 포차제목에 따른 포자정보 검색 -->
+	<select id="PochaDetailSelect" parameterType="String"
+		resultType="com.SSMProject.model.PochaDTO">
+		select * from POCHA_INFO
+		WHERE POCHA_NAME = #{pochatitle}
+	</select>
+
+</mapper>

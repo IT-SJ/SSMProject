@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSM Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+        
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="../assets/css/CommunityPost.css">
+     <!-- 폰트 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+       <!-- 네비게이션 바 ------------------------------------------------------------------------------------------------------------------------------------>
+<header>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SSM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  커뮤니티
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">모임</a></li>
+                  <li><a class="dropdown-item" href="#">게시판</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  포장마차
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">top3</a></li>
+                  <li><a class="dropdown-item" href="#">포장마차 찾기</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  사장님
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">등록</a></li>
+                  <li><a class="dropdown-item" href="#">수정</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">마이페이지</a>
+              </li>
+            </ul>
+            <button class="btn btn-light" type="submit" >로그인</button>
+          </div>
+        </div>
+      </nav>
+      
+  </header>
+    <!-- 메인 -->
+    <main class="container my-5 pt-5">
+        <section>
+            <!-- 회원 정보 -->
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://via.placeholder.com/50" alt="User Image" class="rounded-circle me-3">
+                <div>
+                    <h5 class="mb-0">Ilove_PojangMacha</h5>
+                    <small class="text-muted">진달동 · 1시간 전</small>
+                </div>
+            </div>
+
+            <!-- 게시글 -->
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">글 제목</h3>
+                    <img src="https://via.placeholder.com/900x400" alt="Post Image" class="img-fluid rounded mb-3">
+                    <p>12월 4일 (토) 오전 10:00 12월 넷째 주 정기 모임해요.<br>한강에서 같이 운동합시다!</p>
+                    <div class="d-flex justify-content-between">
+                        <small class="text-muted">Ilove_PojangMacha님의 게시글 ></small>
+                        <div>
+                            <span id="likeCount" class="me-3">❤️ 좋아요 1</span>
+                            <span>💬 댓글 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 댓글창 -->
+            <div class="comments">
+                <h6>댓글</h6>
+                <div class="comment d-flex mb-3">
+                    <img src="https://via.placeholder.com/40" alt="User Image" class="rounded-circle me-2">
+                    <div>
+                        <h6 class="mb-0">붕어빵왕문</h6>
+                        <small class="text-muted">2025.12.15 17:41</small>
+                        <p class="mt-1">모임 참가합니다!!</p>
+                    </div>
+                </div>
+                <form id="commentForm">
+                    <div class="mb-3">
+                        <textarea class="form-control" id="commentInput" rows="2" placeholder="댓글을 입력하세요"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">댓글 작성</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- 자스 연결 -->
+    <script src="../assets/js/CommunityPost.js"></script>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
